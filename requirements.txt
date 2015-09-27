@@ -1,4 +1,6 @@
 Flask<1
 contextio
 sendgrid
+--find-links wheelhouse
+pycrypto==2.6.1
 flask-user
