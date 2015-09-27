@@ -2,9 +2,12 @@
 Routes and views for the flask application.
 """
 
+import os
 from datetime import datetime
 from flask import render_template
+from flask_user import login_required
 from FlaskWebProject import app
+import sendgrid
 
 @app.route('/')
 @app.route('/home')
@@ -27,6 +30,7 @@ def contact():
     )
 
 @app.route('/about')
+@login_required
 def about():
     """Renders the about page."""
     return render_template(
